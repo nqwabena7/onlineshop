@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout • TechShop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1>TechShop</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">Cart 🛒 (<span id="cart-count">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="products">
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+      <label>Full Name</label><br/>
+      <input type="text" required/><br/><br/>
+
+      <label>Email</label><br/>
+      <input type="email" required/><br/><br/>
+
+      <label>Shipping Address</label><br/>
+      <textarea required></textarea><br/><br/>
+
+      <label>Payment Method</label><br/>
+      <select required>
+        <option value="">Select</option>
+        <option>Card Payment</option>
+        <option>Mobile Money</option>
+      </select><br/><br/>
+
+      <button type="submit">Place Order</button>
+    </form>
+    <p id="confirmation"></p>
+  </section>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
