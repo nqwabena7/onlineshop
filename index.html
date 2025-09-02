@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TechShop • iPhones & Laptops</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <h1>TechShop</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cart.html">Cart 🛒 (<span id="cart-count">0</span>)</a></li>
-      </ul>
-    </nav>
+  <!-- Top Nav -->
+  <header class="top-nav">
+    <div class="logo">TechShop</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for iPhones, Laptops...">
+      <button>🔍</button>
+    </div>
+    <div class="nav-links">
+      <a href="#">Account</a>
+      <a href="cart.html">Cart 🛒 (<span id="cart-count">0</span>)</a>
+    </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h2>Best Deals on iPhones & Laptops</h2>
-    <p>Shop your favorite Apple products now!</p>
-  </section>
+  <!-- Categories -->
+  <nav class="category-bar">
+    <a href="#">iPhones</a>
+    <a href="#">Laptops</a>
+    <a href="#">Accessories</a>
+    <a href="#">Deals</a>
+  </nav>
 
-  <!-- Products -->
-  <section class="products">
-    <h2>Our Products</h2>
-    <div class="product-list" id="product-list">
-      <!-- Products will load here via JS -->
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Back to School Deals</h1>
+      <p>Get the best prices on iPhones & Laptops today!</p>
+      <button>Shop Now</button>
     </div>
   </section>
+
+  <!-- Featured Products -->
+  <section class="products">
+    <h2>Featured Products</h2>
+    <div class="product-list" id="product-list"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 TechShop • iPhones & Laptops Store</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
