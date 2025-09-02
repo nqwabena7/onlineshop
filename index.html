@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- Top Nav -->
+  <!-- Header -->
   <header class="top-nav">
     <div class="logo">TechShop</div>
     <div class="search-bar">
@@ -20,34 +20,54 @@
     </div>
   </header>
 
-  <!-- Categories -->
-  <nav class="category-bar">
-    <a href="#">iPhones</a>
-    <a href="#">Laptops</a>
-    <a href="#">Accessories</a>
-    <a href="#">Deals</a>
-  </nav>
+  <!-- Main Layout -->
+  <main class="layout">
+    <!-- Sidebar Categories -->
+    <aside class="sidebar">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">iPhones</a></li>
+        <li><a href="#">Laptops</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Deals</a></li>
+      </ul>
+    </aside>
 
-  <!-- Hero Banner -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Back to School Deals</h1>
-      <p>Get the best prices on iPhones & Laptops today!</p>
-      <button>Shop Now</button>
-    </div>
-  </section>
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+      <div class="slides fade">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-max-deep-purple?wid=512&hei=512" alt="iPhone 14 Pro">
+        <div class="caption">iPhone 14 Pro — Experience the Future</div>
+      </div>
+      <div class="slides fade">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-midnight-select-20220606?wid=512&hei=512" alt="MacBook Air">
+        <div class="caption">MacBook Air M2 — Power Meets Portability</div>
+      </div>
+      <div class="slides fade">
+        <img src="https://i.dell.com/sites/csimages/Merchandizing_Imagery/all/xps-13-9310-laptop-pdp-polaris-gallery-504x350-ng.psd" alt="Dell XPS">
+        <div class="caption">Dell XPS 13 — Sleek & Professional</div>
+      </div>
+    </section>
+  </main>
 
   <!-- Featured Products -->
   <section class="products">
-    <h2>Featured Products</h2>
+    <h2>Top Deals</h2>
     <div class="product-list" id="product-list"></div>
   </section>
 
   <!-- Footer -->
   <footer>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+    </div>
     <p>© 2025 TechShop • iPhones & Laptops Store</p>
   </footer>
 
   <script src="script.js"></script>
+  <script src="slider.js"></script>
 </body>
 </html>
