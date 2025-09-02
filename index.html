@@ -1,73 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TechShop • iPhones & Laptops</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechShop - Online Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #f5f5f5; color: #333; }
+
+    /* Top Nav */
+    .navbar {
+      background: #ff9900;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .logo { font-size: 1.5rem; font-weight: bold; color: #fff; }
+    .navbar .search-bar {
+      flex: 1; margin: 0 2rem;
+      display: flex;
+    }
+    .navbar .search-bar input {
+      flex: 1; padding: 0.5rem; border: none; border-radius: 4px 0 0 4px;
+    }
+    .navbar .search-bar button {
+      padding: 0.5rem 1rem; border: none; background: #333; color: #fff;
+      border-radius: 0 4px 4px 0; cursor: pointer;
+    }
+    .navbar .icons i {
+      margin-left: 1.5rem; color: #fff; cursor: pointer;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9') no-repeat center/cover;
+      height: 400px; display: flex; align-items: center; justify-content: center;
+      color: white; text-align: center;
+    }
+    .hero h1 { font-size: 3rem; background: rgba(0,0,0,0.5); padding: 1rem 2rem; border-radius: 10px; }
+
+    /* Categories */
+    .categories {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem; padding: 2rem;
+    }
+    .category {
+      background: white; padding: 1rem; text-align: center; border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .category:hover { transform: translateY(-5px); }
+    .category img { max-width: 80px; margin-bottom: 0.5rem; }
+
+    /* Featured Products */
+    .products {
+      padding: 2rem;
+    }
+    .products h2 { margin-bottom: 1rem; }
+    .product-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .product {
+      background: white; padding: 1rem; border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center;
+      transition: transform 0.2s;
+    }
+    .product:hover { transform: translateY(-5px); }
+    .product img { max-width: 100%; height: 150px; object-fit: cover; margin-bottom: 0.5rem; }
+    .product h3 { font-size: 1rem; margin: 0.5rem 0; }
+    .product p { color: #ff9900; font-weight: bold; }
+    .product button {
+      margin-top: 0.5rem; padding: 0.5rem 1rem; border: none;
+      background: #ff9900; color: white; border-radius: 4px; cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="top-nav">
+
+  <!-- Navbar -->
+  <div class="navbar">
     <div class="logo">TechShop</div>
     <div class="search-bar">
-      <input type="text" placeholder="Search for iPhones, Laptops...">
-      <button>🔍</button>
+      <input type="text" placeholder="Search for products..." />
+      <button><i class="fa fa-search"></i></button>
     </div>
-    <div class="nav-links">
-      <a href="#">Account</a>
-      <a href="cart.html">Cart 🛒 (<span id="cart-count">0</span>)</a>
+    <div class="icons">
+      <i class="fa fa-user"></i>
+      <i class="fa fa-shopping-cart"></i>
     </div>
-  </header>
+  </div>
 
-  <!-- Main Layout -->
-  <main class="layout">
-    <!-- Sidebar Categories -->
-    <aside class="sidebar">
-      <h3>Categories</h3>
-      <ul>
-        <li><a href="#">iPhones</a></li>
-        <li><a href="#">Laptops</a></li>
-        <li><a href="#">Accessories</a></li>
-        <li><a href="#">Deals</a></li>
-      </ul>
-    </aside>
+  <!-- Hero Banner -->
+  <div class="hero">
+    <h1>Big Sale on iPhones & Laptops!</h1>
+  </div>
 
-    <!-- Hero Slider -->
-    <section class="hero-slider">
-      <div class="slides fade">
-        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-max-deep-purple?wid=512&hei=512" alt="iPhone 14 Pro">
-        <div class="caption">iPhone 14 Pro — Experience the Future</div>
-      </div>
-      <div class="slides fade">
-        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-midnight-select-20220606?wid=512&hei=512" alt="MacBook Air">
-        <div class="caption">MacBook Air M2 — Power Meets Portability</div>
-      </div>
-      <div class="slides fade">
-        <img src="https://i.dell.com/sites/csimages/Merchandizing_Imagery/all/xps-13-9310-laptop-pdp-polaris-gallery-504x350-ng.psd" alt="Dell XPS">
-        <div class="caption">Dell XPS 13 — Sleek & Professional</div>
-      </div>
-    </section>
-  </main>
+  <!-- Categories -->
+  <div class="categories">
+    <div class="category">
+      <img src="https://cdn-icons-png.flaticon.com/512/761/761755.png" alt="iPhones">
+      <h4>iPhones</h4>
+    </div>
+    <div class="category">
+      <img src="https://cdn-icons-png.flaticon.com/512/1803/1803693.png" alt="Laptops">
+      <h4>Laptops</h4>
+    </div>
+    <div class="category">
+      <img src="https://cdn-icons-png.flaticon.com/512/2301/2301121.png" alt="Accessories">
+      <h4>Accessories</h4>
+    </div>
+    <div class="category">
+      <img src="https://cdn-icons-png.flaticon.com/512/2331/2331941.png" alt="Deals">
+      <h4>Hot Deals</h4>
+    </div>
+  </div>
 
   <!-- Featured Products -->
-  <section class="products">
-    <h2>Top Deals</h2>
-    <div class="product-list" id="product-list"></div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-links">
-      <a href="#">About Us</a>
-      <a href="#">Contact</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms</a>
+  <div class="products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-7inch-spaceblack?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1663703841867" alt="iPhone">
+        <h3>iPhone 14 Pro</h3>
+        <p>$999</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71mEsXV+VPL._AC_SL1500_.jpg" alt="Laptop">
+        <h3>MacBook Pro</h3>
+        <p>$1499</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61o7NqjNZTL._AC_SL1500_.jpg" alt="Laptop">
+        <h3>Dell XPS 13</h3>
+        <p>$1200</p>
+        <button>Add to Cart</button>
+      </div>
     </div>
-    <p>© 2025 TechShop • iPhones & Laptops Store</p>
-  </footer>
+  </div>
 
-  <script src="script.js"></script>
-  <script src="slider.js"></script>
 </body>
 </html>
